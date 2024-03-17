@@ -7,9 +7,10 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "app",
-      remotes: {
-        remoteApp: "http://localhost:5001/assets/remoteEntry.js",
+      name: "calculator",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Calculator": "./src/components/Calculator",
       },
       shared: ["react", "react-dom", "tailwindcss"],
     }),
