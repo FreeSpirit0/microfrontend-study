@@ -7,10 +7,10 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "app",
-      remotes: {
-        calculator: "http://localhost:5001/assets/remoteEntry.js",
-        weather: "http://localhost:5002/assets/remoteEntry.js"
+      name: "weather",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Weather": "./src/components/Weather",
       },
       shared: ["react", "react-dom", "tailwindcss"],
     }),

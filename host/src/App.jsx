@@ -1,27 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, Suspense } from 'react'
+import { Link } from "react-router-dom"
 import './App.css'
-import Calculator from 'remoteApp/Calculator'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className='text-green-200'>Sample Super App</h1>
+      <h1 className='text-4xl text-gray-700'>Sample Super App</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <Calculator />
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <div className='flex gap-2'>
+          <button className='p-2 rounded-md border border-blue-100'>
+            <Link to="weather">⛅ Weather App</Link>
+          </button>
+          <button className='p-2 rounded-md border border-blue-100'>
+            <Link to="calculator">➕➖ Calculator App</Link>
+          </button>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
