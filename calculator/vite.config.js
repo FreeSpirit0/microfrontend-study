@@ -10,7 +10,7 @@ export default defineConfig({
       name: "calculator",
       filename: "remoteEntry.js",
       exposes: {
-        "./Calculator": "./src/components/Calculator",
+        "./Calculator": "./src/App",
       },
       shared: ["react", "react-dom", "tailwindcss"],
     }),

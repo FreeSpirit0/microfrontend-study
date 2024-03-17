@@ -10,7 +10,7 @@ export default defineConfig({
       name: "weather",
       filename: "remoteEntry.js",
       exposes: {
-        "./Weather": "./src/components/Weather",
+        "./Weather": "./src/App",
       },
       shared: ["react", "react-dom", "tailwindcss"],
     }),

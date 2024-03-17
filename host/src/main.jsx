@@ -8,8 +8,9 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import Calculator from 'calculator/Calculator'
-import Weather from 'weather/Weather'
+import Calculator from 'calculator/Calculator';
+import Weather from 'weather/Weather';
+
 
 const router = createBrowserRouter([
   {

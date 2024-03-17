@@ -1,9 +1,11 @@
+import Weather from "./components/Weather"
+
 function App() {
 
   return (
-    <>
-      <p className="text-xl text-red-100">Weather App</p>
-    </>
+    <div className="h-[100vh] flex justify-center items-center p-4">
+      <Weather />
+    </div>
   )
 }
 
